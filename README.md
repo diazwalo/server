@@ -30,6 +30,7 @@ Le serveur se lance avec la commande `mvn exec:java`. La compilation
 n'est pas automatique pour cette tâche donc vous devriez plutôt
 utiliser : `mvn compile exec:java`.
 
+<img alt="" width="480" src="https://gitlab.com/univlille/defi-agile-iut/skeleton/server/uploads/35bec6ee34eacb5fde539f7a06b26d8e/mvn-compile-exec-java.gif" >
 
 La ressource exemple fournie est accessible à l'URL
 http://localhost:8080/api/v1/myresource

@@ -29,6 +29,7 @@ public class Main {
         // create a resource config that scans for JAX-RS resources and providers
         // in fr.ulille.iut.agile package
         ResourceConfig rc = new ResourceConfig().packages("fr.ulille.iut.agile");
+	rc.register(CORSFilter.class);
 	//rc.register(new LoggingFeature(LOGGER, LoggingFeature.Verbosity.PAYLOAD_TEXT));
 	rc.register(new LoggingFeature(Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME), Level.ALL, LoggingFeature.Verbosity.PAYLOAD_TEXT, Integer.MAX_VALUE));
 	LOGGER.info("Main");

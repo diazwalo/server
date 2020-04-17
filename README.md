@@ -1,7 +1,11 @@
 # Squelette de la partie serveur REST
 
 # Lancement du serveur pour les tests
-Le serveur se lance avec la commande `mvn exec:java`.
+Le serveur se lance avec la commande `mvn exec:java`. La compilation
+n'est pas automatique pour cette tâche donc vous devriez plutôt
+utiliser : `mvn compile exec:java`.
+
+
 La ressource exemple fournie est accessible avec l'URL
 `http://localhost:8080/api/v1/myresource`
 

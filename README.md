@@ -1,9 +1,7 @@
 #### Projet agile <!-- omit in toc -->
 # Serveur REST <!-- omit in toc -->
 
-***Ce repo contient le code de l'API REST du projet agile.***
-
-***Cette API est interrogée par le [client android](https://gitlab.com/univlille/defi-agile-iut/skeleton/client-android) et le [client web](https://gitlab.com/univlille/defi-agile-iut/skeleton/client-web).***
+***Ce repo contient le code de l'API REST du projet agile. Cette API est interrogée par le [client android](https://gitlab.com/univlille/defi-agile-iut/skeleton/client-android) et le [client web](https://gitlab.com/univlille/defi-agile-iut/skeleton/client-web).***
 
 Il est recommandé de lancer ce serveur **AVANT** de démarrer le setup des deux clients.
 

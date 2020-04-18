@@ -11,7 +11,7 @@ cache:
 
 .sonar:
   stage: 🔍 test
-  image: openjdk:14-jdk
+  image: openjdk:14-jdk-buster
   coverage: '/Total.*?([0-9]{1,3})%/'
   script:
     - apt-get update && apt-get -y install maven && apt-get clean
@@ -20,7 +20,7 @@ cache:
 
 test:
   stage: 🔍 test
-  image: openjdk:14-jdk
+  image: openjdk:14-jdk-buster
   script:
     - apt-get update && apt-get -y install maven && apt-get clean
     - mvn $MAVEN_OPTS test

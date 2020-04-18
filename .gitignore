@@ -122,3 +122,7 @@ buildNumber.properties
 .history
 
 # End of https://www.gitignore.io/api/git,java,emacs,maven,java-web,visualstudiocode
+
+# Intellij
+.idea/
+*.iml

@@ -1,6 +1,7 @@
 stages:
   - 🔍 test
   - 📦 build
+  - 🐋 deploy
 
 variables:
   MAVEN_OPTS: "-Dmaven.repo.local=./.m2/repository"
@@ -35,3 +36,9 @@ build:
     - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
 
+deploy:
+  stage: 🐋 deploy
+  script:
+    - curl -X POST -data=""  https://deliverous.com/api/v1/trigger/$DELIVEROUS_TRIGGER
+  only:
+    - master

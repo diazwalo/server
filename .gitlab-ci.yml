@@ -9,7 +9,7 @@ cache:
   paths:
     - ./.m2/
 
-sonar:
+.sonar:
   stage: 🔍 test
   image: openjdk:14-jdk
   coverage: '/Total.*?([0-9]{1,3})%/'

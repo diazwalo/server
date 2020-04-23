@@ -16,6 +16,11 @@ test:
   script:
     - apt-get update && apt-get -y install maven && apt-get clean
     - mvn $MAVEN_OPTS test
+  artifacts:
+    reports:
+      junit:
+        - target/surefire-reports/*.xml
+        - target/failsafe-reports/*.xml
 
 sonar:
   stage: 🔍 test

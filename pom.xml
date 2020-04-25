@@ -168,5 +168,6 @@
         <sqlite-jdbc.version>3.30.1</sqlite-jdbc.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.host.url>https://sonar.tcweb.org/</sonar.host.url>
+        <sonar.projectName>${groupId}:${artifactId}</sonar.projectName>
     </properties>
 </project>

@@ -44,7 +44,9 @@ public class Main {
      */
     public static void main(String[] args) throws InterruptedException {
         final HttpServer server = startServer();
-        LOGGER.info(String.format("Jersey app started with WADL available at " + "%sapplication.wadl", BASE_URI));
+        if(server != null) {
+            LOGGER.info(String.format("Jersey app started with WADL available at " + "%sapplication.wadl", BASE_URI));
+        }
         Thread.currentThread().join();
         server.shutdownNow();
     }

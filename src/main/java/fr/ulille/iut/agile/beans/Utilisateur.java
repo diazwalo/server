@@ -7,13 +7,13 @@ public class Utilisateur {
 	private String name;
 	private String mdp;
 	private String email;
-	private UUID identifiant;
+	private String identifiant;
 	
 	public Utilisateur(String pName, String pMdp, String pEmail) {
 		name = pName;
 		mdp = pMdp;
 		email = pEmail;
-		identifiant = UUID.randomUUID();
+		identifiant = UUID.randomUUID().toString();
 	}
 
 	public String getName() {
@@ -40,7 +40,7 @@ public class Utilisateur {
 		this.email = email;
 	}
 
-	public UUID getIdentifiant() {
+	public String getIdentifiant() {
 		return identifiant;
 	}
 

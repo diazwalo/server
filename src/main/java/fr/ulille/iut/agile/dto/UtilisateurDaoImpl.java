@@ -36,13 +36,15 @@ public class UtilisateurDaoImpl implements UtilisateurDao{
 	@Override
 	public Utilisateur getUtilisateur(String uno) {
 		// TODO Auto-generated method stub
-		return listUtilisateur.get(listUtilisateur.indexOf(uno));
-		
+		for(Utilisateur user: listUtilisateur) {
+			if(user.getIdentifiant().equals(uno)) return user;
+		}
+		return null;
 	}
 
 	@Override
 	public void deleteUtilisateur(Utilisateur uno) {
 		// TODO Auto-generated method stub
-		listUtilisateur.remove(listUtilisateur.indexOf(uno));
+		listUtilisateur.remove(uno);
 	}
 }

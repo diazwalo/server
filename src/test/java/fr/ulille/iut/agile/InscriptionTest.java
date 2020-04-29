@@ -1,5 +1,6 @@
 package fr.ulille.iut.agile;
 
+import javax.json.JsonObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
@@ -41,6 +42,20 @@ public class InscriptionTest {
     @After
     public void tearDown() throws Exception {
         server.stop();
+    }
+
+    /**
+     * Test if the JSON is correctly created.
+     */
+    @Test
+    public void testInscription() {
+        JsonObject responseJson1 = target.path("register/admin/admin/admin@admin.fr").request().get(JsonObject.class);
+        assertEquals("admin", responseJson1.getString("name"));
+        assertTrue(responseJson1.getBoolean("register"));
+
+        JsonObject responseJson2 = target.path("register/truc/admin/admin@admin.fr").request().get(JsonObject.class);
+        assertEquals("truc", responseJson2.getString("name"));
+        assertTrue(responseJson2.getBoolean("register"));
     }
 
     /**

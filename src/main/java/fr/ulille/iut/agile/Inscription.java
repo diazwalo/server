@@ -1,5 +1,6 @@
 package fr.ulille.iut.agile;
 
+import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,6 +11,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
+import fr.ulille.iut.agile.beans.ListConnected;
 import fr.ulille.iut.agile.beans.Utilisateur;
 
 @Path("register")
@@ -45,6 +47,8 @@ public class Inscription
 		json.add("name", pName);
 		json.add("register", true);
 		json.add("uuid", user.getIdentifiant());
+		
+		ListConnected.instance.addConnected(UUID.fromString(user.getIdentifiant()));
 		
 		return json.build();
 	}

@@ -5,8 +5,12 @@ import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
+import fr.ulille.iut.agile.beans.ListConnected;
+import fr.ulille.iut.agile.beans.Utilisateur;
+
 import java.io.IOException;
 import java.net.URI;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -45,6 +49,9 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at " + "%sapplication.wadl", BASE_URI));
+        Utilisateur student1 = new Utilisateur("admin", "admin", "admin@admin.com");
+        ListConnected.instance.addConnected(UUID.fromString(student1.getIdentifiant()));
+	    System.out.println(student1.getIdentifiant());
         Thread.currentThread().join();
         server.shutdownNow();
     }

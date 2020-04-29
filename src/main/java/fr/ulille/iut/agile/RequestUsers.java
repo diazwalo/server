@@ -7,13 +7,15 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-@Path("users")
-public class RequestUsers {
+@Path("{sendByUUID}/users")
+public class RequestUsers extends Request {
 
 	@GET
 	@Path("{uuid}/name")
-	public JsonObject getNameByUUID(@PathParam("uuid") String pUUID)
+	public JsonObject getNameByUUID(@PathParam("sendByUUID") String sendBy, @PathParam("uuid") String pUUID)
 	{
+		update(pUUID);
+		
 		JsonObjectBuilder json = Json.createObjectBuilder();
 		json.add("name", "");
 		

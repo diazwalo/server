@@ -9,6 +9,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
+import fr.ulille.iut.agile.beans.ListConnected;
+
 @Path("authent")
 public class Authentification 
 {
@@ -25,8 +27,12 @@ public class Authentification
 		}
 		else
 		{
+			UUID uuid = UUID.randomUUID();
+			
 			json.add("authent", true);
-			json.add("uuid", UUID.randomUUID().toString());
+			json.add("uuid", uuid.toString());
+			
+			ListConnected.instance.addConnected(uuid);
 		}
 		
 		return json.build();

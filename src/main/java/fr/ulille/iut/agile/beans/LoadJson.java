@@ -18,7 +18,9 @@ public class LoadJson {
 	
 	public void load() {
 		JsonObject jsonVilles = jsonToStructure("res"+File.separator+"CoefSecuVille.json");
-		loadListVilles(jsonVilles);
+		if(jsonVilles != null) {
+			loadListVilles(jsonVilles);
+		}
 	}
 	
 	private JsonObject jsonToStructure(String chemin) {

@@ -3,31 +3,33 @@ package fr.ulille.iut.agile.beans;
 import java.util.UUID;
 
 public class Cuve {
-	private final int valeurAlerteBase = 3/4;
+
+	private static final int valeurAlerteBase = 3/4;
+
 	private String cno;
-	private int capcite;
-	private int qunatitéActuel;
+	private int capacite;
+	private int quantiteActuelle;
 	private int alerteQuantite;
 	private String nom;
 	
-	public Cuve(int capacite, int qunatitéActuel) {
+	public Cuve(int capacite, int quantiteActuelle) {
 		super();
 		this.cno = UUID.randomUUID().toString();
-		this.capcite = capacite;
+		this.capacite = capacite;
 		//L'utilisateur rentre une quantité d'eau suppérieur de la capcité
-		if(qunatitéActuel>capacite) {
-			qunatitéActuel = 0;
+		if(quantiteActuelle>capacite) {
+			quantiteActuelle = 0;
 		}
-		this.qunatitéActuel = qunatitéActuel;
+		this.quantiteActuelle = quantiteActuelle;
 		this.alerteQuantite = capacite * valeurAlerteBase;
 	}
 
-	public int getQunatitéActuel() {
-		return qunatitéActuel;
+	public int getQuantiteActuelle() {
+		return quantiteActuelle;
 	}
 
-	public void setQunatitéActuel(int qunatitéActuel) {
-		this.qunatitéActuel = qunatitéActuel;
+	public void setQuantiteActuelle(int quantiteActuelle) {
+		this.quantiteActuelle = quantiteActuelle;
 	}
 
 	public int getAlerteQuantite() {
@@ -43,7 +45,7 @@ public class Cuve {
 	}
 
 	public int getCapcite() {
-		return capcite;
+		return capacite;
 	}
 
 	public String getNom() {

@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class ListConnected {
 	
-	public static ListConnected instance = new ListConnected();
+	public static final ListConnected instance = new ListConnected();
 	
 	private List<Connected> myListConnected;
 	

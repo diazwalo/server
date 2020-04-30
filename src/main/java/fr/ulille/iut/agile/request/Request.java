@@ -1,4 +1,4 @@
-package fr.ulille.iut.agile;
+package fr.ulille.iut.agile.request;
 
 import java.util.UUID;
 

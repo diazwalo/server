@@ -1,4 +1,4 @@
-package fr.ulille.iut.agile;
+package fr.ulille.iut.agile.request;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -5,13 +5,10 @@ import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import fr.ulille.iut.agile.beans.ListConnected;
 import fr.ulille.iut.agile.beans.LoadJson;
-import fr.ulille.iut.agile.beans.Utilisateur;
 
 import java.io.IOException;
 import java.net.URI;
-import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

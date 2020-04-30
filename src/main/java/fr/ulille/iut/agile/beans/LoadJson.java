@@ -48,7 +48,7 @@ public class LoadJson {
 				
 				list.addVille(new Ville(name, coef));
 			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 		    LOGGER.severe("Erreur de chargement");
 		}
 	}

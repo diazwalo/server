@@ -1,7 +1,6 @@
 package fr.ulille.iut.agile.dao;
 
 import java.util.List;
-import java.util.UUID;
 
 import fr.ulille.iut.agile.beans.Utilisateur;
 

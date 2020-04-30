@@ -25,19 +25,8 @@ public class Inscription
 	public JsonObject register(@PathParam("name") String pName, @PathParam("mdp") String pMdp, @PathParam("email") String pEmail) 
 	{
 		JsonObjectBuilder json = Json.createObjectBuilder();
-		if(!patternIsCorrect(EMAIL_PATTERN, pEmail))
-		{
-			json.add("register", false);
-			return json.build();
-		}
 		
-		if(!patternIsCorrect(NAME_PATTERN, pName))
-		{
-			json.add("register", false);
-			return json.build();
-		}
-		
-		if(!patternIsCorrect(NAME_PATTERN, pMdp)) 
+		if(!patternIsCorrect(EMAIL_PATTERN, pEmail) || !patternIsCorrect(NAME_PATTERN, pName) || !patternIsCorrect(NAME_PATTERN, pMdp))
 		{
 			json.add("register", false);
 			return json.build();

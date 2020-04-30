@@ -1,0 +1,44 @@
+{
+	"Villes": [
+		{
+			"name" : "Paris",
+			"coef" : 100		
+		},
+		{
+			"name" : "Marseille",
+			"coef" : 130		
+		},
+		{
+			"name" : "Lyon",
+			"coef" : 120	
+		},
+		{
+			"name" : "Toulouse",
+			"coef" : 125		
+		},
+		{
+			"name" : "Nice",
+			"coef" : 130		
+		},
+		{
+			"name" : "Nantes",
+			"coef" : 110		
+		},
+		{
+			"name" : "Monpellier",
+			"coef" : 130		
+		},
+		{
+			"name" : "Strasbourg",
+			"coef" : 120	
+		},
+		{
+			"name" : "Bordeaux",
+			"coef" : 115		
+		},
+		{
+			"name" : "Lille",
+			"coef" : 100		
+		}
+	]
+}

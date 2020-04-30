@@ -1,5 +1,6 @@
 package fr.ulille.iut.agile.beans;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -13,7 +14,7 @@ public class LoadJson {
 	public static LoadJson instance = new LoadJson();
 	
 	public void load() {
-		JsonObject jsonVilles = jsonToStructure("res/CoefSecuVille.json");
+		JsonObject jsonVilles = jsonToStructure("res"+File.separator+"CoefSecuVille.json");
 		loadListVilles(jsonVilles);
 	}
 	

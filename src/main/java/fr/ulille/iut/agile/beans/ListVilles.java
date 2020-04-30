@@ -31,4 +31,8 @@ public class ListVilles {
 		return myVille.getCoefSecu();
 	}
 	
+	public boolean exist(String pName) {
+		return getVille(pName) != null;
+	}
+	
 }

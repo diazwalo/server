@@ -10,7 +10,7 @@ import javax.ws.rs.PathParam;
 import fr.ulille.iut.agile.beans.Cuve;
 
 @Path("cuve")
-public class RequestCuve extends Request {
+public class RequestCuve implements Request {
 
 	@GET
 	@Path("add/{uuid}/{capacite}/{quantite}")

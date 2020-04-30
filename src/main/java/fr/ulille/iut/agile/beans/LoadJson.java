@@ -1,5 +1,6 @@
 package fr.ulille.iut.agile.beans;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -8,12 +9,15 @@ import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 
+import java.util.logging.Logger;
+
 public class LoadJson {
 
 	public static final LoadJson instance = new LoadJson();
+	private static final Logger LOGGER = Logger.getLogger(LoadJson.class.getName());
 	
 	public void load() {
-		JsonObject jsonVilles = jsonToStructure("res/CoefSecuVille.json");
+		JsonObject jsonVilles = jsonToStructure("res"+File.separator+"CoefSecuVille.json");
 		loadListVilles(jsonVilles);
 	}
 	
@@ -25,7 +29,7 @@ public class LoadJson {
 	        reader.close();
 		    return json;
 		} catch (IOException e) {
-		    System.out.println("Erreur de chargement");
+		    LOGGER.severe("Erreur de chargement");
 		}
 		return null;
 	}

@@ -11,7 +11,7 @@ public class CuveDaoImpl implements CuveDao{
 	List<Cuve> listCuve;
 
 	public CuveDaoImpl(){
-		listCuve = new ArrayList<Cuve>();
+		listCuve = new ArrayList<>();
 		Cuve cuve1 = new Cuve(500, 10);
 		Cuve cuve2 = new Cuve(25, 2);
 		Cuve cuve3 = new Cuve(1000, 0);
@@ -21,13 +21,11 @@ public class CuveDaoImpl implements CuveDao{
 	}
 	@Override
 	public void ajouter(Cuve cuve) {
-		// TODO Auto-generated method stub
 		listCuve.add(cuve);
 	}
 
 	@Override
 	public List<Cuve> lister() {
-		// TODO Auto-generated method stub
 		return listCuve;
 	}
 
@@ -41,12 +39,10 @@ public class CuveDaoImpl implements CuveDao{
 
 	@Override
 	public void deleteCuve(Cuve cno) {
-		// TODO Auto-generated method stub
 		listCuve.remove(cno);
 	}
 	@Override
 	public void modifierNom(Cuve cuve, String nom) {
-		// TODO Auto-generated method stub
 		cuve.setNom(nom);
 	}
 

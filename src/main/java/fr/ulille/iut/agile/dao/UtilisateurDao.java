@@ -1,10 +1,10 @@
 package fr.ulille.iut.agile.dao;
 
 import java.util.List;
-
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
+
 
 import fr.ulille.iut.agile.beans.Utilisateur;
 

@@ -5,20 +5,20 @@ import java.util.List;
 
 public class ListVilles {
 
-	private List<Ville> listVilles;
+	private List<Ville> listeVilles;
 	
 	public static final ListVilles instance = new ListVilles();
 	
 	private ListVilles() {
-		listVilles = new ArrayList<Ville>();
+		listeVilles = new ArrayList<>();
 	}
 	
 	public void addVille(Ville pVille) {
-		listVilles.add(pVille);
+		listeVilles.add(pVille);
 	}
 	
 	public Ville getVille(String pName) {
-		for(Ville myVille: listVilles) {
+		for(Ville myVille: listeVilles) {
 			if(myVille.getName().equalsIgnoreCase(pName)) return myVille;
 		}
 		return null;
@@ -29,6 +29,10 @@ public class ListVilles {
 		if(myVille == null) return -1;
 		
 		return myVille.getCoefSecu();
+	}
+	
+	public boolean exist(String pName) {
+		return getVille(pName) != null;
 	}
 	
 }

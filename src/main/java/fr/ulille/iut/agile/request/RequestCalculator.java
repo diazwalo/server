@@ -24,21 +24,21 @@ public class RequestCalculator {
 			
 			float coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
-				json.add("value", "ville incorrecte");
+				json.add("stockage", "ville incorrecte");
 				return json.build();
 			}
 			
 			float res = consoJour * nbJoursSansPluie * coef / 1000;
-			json.add("value", res);
+			json.add("stockage", res);
 		} catch(NumberFormatException e) {
-			json.add("value", "parametres incorrectes");
+			json.add("stockage", "parametres incorrectes");
 		}
 		
 		return json.build();
 	}
 	
 	@GET
-	@Path("surface/{dimensionMur}/{consoJour}/{ville}")
+	@Path("conso/{dimensionMur}/{consoJour}/{ville}")
 	public JsonObject calculSurfaceHydratable(@PathParam("dimensionMur") String pDimensionMur, @PathParam("consoJour") String pConsoJour,
 			@PathParam("ville") String pVille) {
 		
@@ -49,14 +49,14 @@ public class RequestCalculator {
 			
 			float coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
-				json.add("value", "ville incorrecte");
+				json.add("conso", "ville incorrecte");
 				return json.build();
 			}
 			
 			float res = dimensionMur * consoJour * coef;
-			json.add("value", res);
+			json.add("conso", res);
 		} catch(NumberFormatException e) {
-			json.add("value", "parametres incorrectes");
+			json.add("conso", "parametres incorrectes");
 		}
 		
 		return json.build();

@@ -10,30 +10,27 @@ public class MurDaoImpl implements MurDao {
 	 List<Mur> listMur;
 	 
 	 public MurDaoImpl(){
-			listMur = new ArrayList<Mur>();
-			Mur Mur1 = new Mur(5000, "Lille", "Mon jolie mur");
-			Mur Mur2 = new Mur(5000, "Paris", "IciCestParis");
-			Mur Mur3 = new Mur(5000, "Marseille", "Vive l'OM");
-			listMur.add(Mur1);
-			listMur.add(Mur2);
-			listMur.add(Mur3);
+			listMur = new ArrayList<>();
+			Mur mur1 = new Mur(5000, "Lille", "Mon jolie mur");
+			Mur mur2 = new Mur(5000, "Paris", "IciCestParis");
+			Mur mur3 = new Mur(5000, "Marseille", "Vive l'OM");
+			listMur.add(mur1);
+			listMur.add(mur2);
+			listMur.add(mur3);
 		}
 	 
 	@Override
 	public void ajouter(Mur cuve) {
-		// TODO Auto-generated method stub
 		listMur.add(cuve);
 	}
 
 	@Override
 	public List<Mur> lister() {
-		// TODO Auto-generated method stub
 		return listMur;
 	}
 
 	@Override
 	public Mur getMur(String uno) {
-		// TODO Auto-generated method stub
 		for(Mur mur: listMur) {
 			if(mur.getCno().equals(uno)) return mur;
 		}
@@ -42,14 +39,12 @@ public class MurDaoImpl implements MurDao {
 
 	@Override
 	public void deleteMur(Mur uno) {
-		// TODO Auto-generated method stub
 		listMur.remove(uno);
 	}
 
 	@Override
 	public void modifierNom(Mur mur, String nom) {
-		// TODO Auto-generated method stub
-		mur.setNom(nom);;
+		mur.setNom(nom);
 	}
 
 }

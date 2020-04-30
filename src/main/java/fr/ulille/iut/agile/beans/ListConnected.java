@@ -11,7 +11,7 @@ public class ListConnected {
 	private List<Connected> myListConnected;
 	
 	private ListConnected() {
-		myListConnected = new ArrayList<Connected>();
+		myListConnected = new ArrayList<>();
 	}
 	
 	public void addConnected(UUID pUUID) {

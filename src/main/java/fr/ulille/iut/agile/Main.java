@@ -6,6 +6,7 @@ import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import fr.ulille.iut.agile.beans.ListConnected;
+import fr.ulille.iut.agile.beans.LoadJson;
 import fr.ulille.iut.agile.beans.Utilisateur;
 
 import java.io.IOException;
@@ -37,7 +38,14 @@ public class Main {
         LOGGER.info("Main");
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
+        
+        loadRessource();
+        
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+    }
+    
+    private static void loadRessource() {
+    	LoadJson.instance.load();
     }
 
     /**
@@ -49,9 +57,6 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at " + "%sapplication.wadl", BASE_URI));
-        Utilisateur student1 = new Utilisateur("admin", "admin", "admin@admin.com");
-        ListConnected.instance.addConnected(UUID.fromString(student1.getIdentifiant()));
-	    System.out.println(student1.getIdentifiant());
         Thread.currentThread().join();
         server.shutdownNow();
     }

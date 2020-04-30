@@ -10,7 +10,7 @@ import javax.json.JsonReader;
 
 public class LoadJson {
 
-	public static LoadJson instance = new LoadJson();
+	public static final LoadJson instance = new LoadJson();
 	
 	public void load() {
 		JsonObject jsonVilles = jsonToStructure("res/CoefSecuVille.json");

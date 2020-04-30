@@ -7,7 +7,7 @@ public class ListVilles {
 
 	private List<Ville> listVilles;
 	
-	public static ListVilles instance = new ListVilles();
+	public static final ListVilles instance = new ListVilles();
 	
 	private ListVilles() {
 		listVilles = new ArrayList<Ville>();

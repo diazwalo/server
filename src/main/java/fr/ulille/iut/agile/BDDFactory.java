@@ -1,4 +1,6 @@
 package fr.ulille.iut.agile;
+
+import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import org.slf4j.Logger;
@@ -6,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.sqlite.SQLiteDataSource;
 
 import javax.inject.Singleton;
+
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -28,11 +31,13 @@ public class BDDFactory {
     }
 
     static boolean tableExist(String tableName) throws SQLException {
-        DatabaseMetaData dbm = getJdbi().open().getConnection().getMetaData();
-        ResultSet tables = dbm.getTables(null, null, tableName, null);
-        boolean exist = tables.next();
-        tables.close();
-        return exist;
+        try(Handle handle = getJdbi().open()) {
+            DatabaseMetaData dbm = handle.getConnection().getMetaData();
+            ResultSet tables = dbm.getTables(null, null, tableName, null);
+            boolean exist = tables.next();
+            tables.close();
+            return exist;
+        }
     }
 
     public static <T> T buildDao(Class<T> daoClass) {

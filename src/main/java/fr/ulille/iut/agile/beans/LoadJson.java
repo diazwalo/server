@@ -22,11 +22,10 @@ public class LoadJson {
 		try {
 		    reader = Json.createReader(new FileReader(chemin));
 		    JsonObject json = reader.readObject();
+	        reader.close();
 		    return json;
 		} catch (IOException e) {
 		    System.out.println("Erreur de chargement");
-		} finally {
-	        reader.close();
 		}
 		return null;
 	}

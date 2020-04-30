@@ -1,14 +1,16 @@
 package fr.ulille.iut.agile.beans;
 
 import java.util.UUID;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class Utilisateur {
-	
+public class Utilisateur{
+	final static Logger logger = LoggerFactory.getLogger(Utilisateur.class);
 	private String name;
 	private String mdp;
 	private String email;
 	private String identifiant;
-	
+
 	public Utilisateur(String pName, String pMdp, String pEmail) {
 		name = pName;
 		mdp = pMdp;
@@ -44,5 +46,5 @@ public class Utilisateur {
 		return identifiant;
 	}
 
-	
+
 }

@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 @Path("{sendByUUID}/users")
-public class RequestUsers extends Request {
+public class RequestUsers implements Request {
 
 	@GET
 	@Path("{uuid}/name")

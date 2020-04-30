@@ -18,20 +18,21 @@ public class RequestCalculator {
 			@PathParam("ville") String pVille) {
 		
 		JsonObjectBuilder json = Json.createObjectBuilder();
+		String stockage = "stockage";
 		try {
 			float consoJour = Float.parseFloat(pConsoJour);
 			int nbJoursSansPluie = Integer.parseInt(pNbJoursSansPluie);
 			
 			float coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
-				json.add("stockage", "ville incorrecte");
+				json.add(stockage, "ville incorrecte");
 				return json.build();
 			}
 			
 			float res = consoJour * nbJoursSansPluie * coef / 1000;
-			json.add("stockage", res);
+			json.add(stockage, res);
 		} catch(NumberFormatException e) {
-			json.add("stockage", "parametres incorrectes");
+			json.add(stockage, "parametres incorrectes");
 		}
 		
 		return json.build();
@@ -43,20 +44,21 @@ public class RequestCalculator {
 			@PathParam("ville") String pVille) {
 		
 		JsonObjectBuilder json = Json.createObjectBuilder();
+		String conso = "conso";
 		try {
 			float dimensionMur = Float.parseFloat(pDimensionMur);
 			float consoJour = Float.parseFloat(pConsoJour);
 			
 			float coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
-				json.add("conso", "ville incorrecte");
+				json.add(conso, "ville incorrecte");
 				return json.build();
 			}
 			
 			float res = dimensionMur * consoJour * coef;
-			json.add("conso", res);
+			json.add(conso, res);
 		} catch(NumberFormatException e) {
-			json.add("conso", "parametres incorrectes");
+			json.add(conso, "parametres incorrectes");
 		}
 		
 		return json.build();

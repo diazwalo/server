@@ -4,22 +4,22 @@ import java.util.UUID;
 
 public class Mur {
 	private String cno;
-	private int superficie;
+	private float superficie;
 	private String geolocalisation;
 	private String nom;
 	
-	public Mur(int superficie, String geolocalisation, String nom) {
+	public Mur(float superficie, String geolocalisation, String nom) {
 		this.cno = UUID.randomUUID().toString();
 		this.superficie = superficie;
 		this.geolocalisation = geolocalisation;
 		this.nom = nom;
 	}
 
-	public int getSuperficie() {
+	public float getSuperficie() {
 		return superficie;
 	}
 
-	public void setSuperficie(int superficie) {
+	public void setSuperficie(float superficie) {
 		this.superficie = superficie;
 	}
 

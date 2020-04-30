@@ -9,9 +9,9 @@ import fr.ulille.iut.agile.dao.UtilisateurDao;
 
 public class UtilisateurDaoImpl implements UtilisateurDao{
 
-	 List<Utilisateur> listUtilisateur;
+	List<Utilisateur> listUtilisateur;
 
-	   public UtilisateurDaoImpl(){
+	public UtilisateurDaoImpl(){
 	      listUtilisateur = new ArrayList<Utilisateur>();
 	      Utilisateur student1 = new Utilisateur("admin","admin", "admin.admin@gmail.com");
 	      Utilisateur student2 = new Utilisateur("toto","toto", "toto.toto@gmail.com");
@@ -19,7 +19,8 @@ public class UtilisateurDaoImpl implements UtilisateurDao{
 	      listUtilisateur.add(student1);
 	      listUtilisateur.add(student2);
 	      listUtilisateur.add(student3);
-	   }
+	}
+	
 	@Override
 	public void ajouter(Utilisateur util) {
 		// TODO Auto-generated method stub

@@ -42,7 +42,14 @@ public class UtilisateurDaoImpl implements UtilisateurDao{
 	}
 
 	@Override
-	public void deleteUtilisateur(Utilisateur uno) {
-		listUtilisateur.remove(uno);
+	public void creationTable() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteUtilisateur(String uno) {
+		// TODO Auto-generated method stub
+		
 	}
 }

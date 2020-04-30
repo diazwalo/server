@@ -11,7 +11,7 @@ import fr.ulille.iut.agile.beans.ListVilles;
 import fr.ulille.iut.agile.beans.Mur;
 
 @Path("mur")
-public class RequestMur extends Request {
+public class RequestMur implements Request {
 
 	@GET
 	@Path("add/{uuid}/{superficie}/{ville}/{name}")

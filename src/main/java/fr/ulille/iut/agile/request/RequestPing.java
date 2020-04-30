@@ -5,7 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 @Path("ping")
-public class RequestPing extends Request {
+public class RequestPing implements Request {
 
 	@GET
 	@Path("{uuid}")

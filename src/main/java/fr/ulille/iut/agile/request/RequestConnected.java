@@ -12,7 +12,7 @@ import javax.ws.rs.PathParam;
 import fr.ulille.iut.agile.beans.ListConnected;
 
 @Path("connected")
-public class RequestConnected extends Request {
+public class RequestConnected implements Request {
 
 	@GET
 	@Path("{uuid}")

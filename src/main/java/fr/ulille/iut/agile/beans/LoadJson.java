@@ -37,16 +37,20 @@ public class LoadJson {
 	private void loadListVilles(JsonObject pJson) {
 		ListVilles list = ListVilles.instance;
 		
-		 JsonArray villeArray = pJson.getJsonArray("Villes");
-		 int size = villeArray.size();
-		 for(int i=0; i<size; i++) {
-			 JsonObject villeObj = villeArray.getJsonObject(i);
-			 
-			 String name = villeObj.getString("name");
-			 float coef = villeObj.getInt("coef") / 100f;
-			 
-			 list.addVille(new Ville(name, coef));
-		 }
+		try {
+			JsonArray villeArray = pJson.getJsonArray("Villes");
+			int size = villeArray.size();
+			for(int i=0; i<size; i++) {
+				JsonObject villeObj = villeArray.getJsonObject(i);
+				
+				String name = villeObj.getString("name");
+				float coef = villeObj.getInt("coef") / 100f;
+				
+				list.addVille(new Ville(name, coef));
+			}
+		} catch (Exception e) {
+		    LOGGER.severe("Erreur de chargement");
+		}
 	}
 	
 }

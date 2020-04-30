@@ -13,14 +13,13 @@ import fr.ulille.iut.agile.beans.ListVilles;
 public class RequestCalculator {
 
 	@GET
-	@Path("stockage/{consoJour}/{nbJoursSansPluie}/{ville}")
-	public JsonObject calculDimensionStockage(@PathParam("consoJour") String pConsoJour, @PathParam("nbJoursSansPluie") String pNbJoursSansPluie,
-			@PathParam("ville") String pVille) {
+	@Path("stockage/{consoJour}/{ville}")
+	public JsonObject calculDimensionStockage(@PathParam("consoJour") String pConsoJour, @PathParam("ville") String pVille) {
 		
 		JsonObjectBuilder json = Json.createObjectBuilder();
 		try {
 			float consoJour = Float.parseFloat(pConsoJour);
-			int nbJoursSansPluie = Integer.parseInt(pNbJoursSansPluie);
+			// Recuperer via la ville int nbJoursSansPluie = 
 			
 			float coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
@@ -28,7 +27,7 @@ public class RequestCalculator {
 				return json.build();
 			}
 			
-			float res = consoJour * nbJoursSansPluie * coef / 1000;
+			float res = consoJour * /*nbJoursSansPluie * */ coef / 1000;
 			json.add("stockage", res);
 		} catch(NumberFormatException e) {
 			json.add("stockage", "parametres incorrectes");

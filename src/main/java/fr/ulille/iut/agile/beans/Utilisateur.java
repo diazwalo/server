@@ -3,9 +3,9 @@ package fr.ulille.iut.agile.beans;
 import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.logging.Logger;
 
 public class Utilisateur{
-	private static final Logger logger = LoggerFactory.getLogger(Utilisateur.class);
 	private String name;
 	private String mdp;
 	private String email;

@@ -18,6 +18,10 @@ public class BDDFactory {
     private static Jdbi jdbi = null;
     private final static Logger log = LoggerFactory.getLogger(BDDFactory.class);
 
+    private BDDFactory() {
+        throw new IllegalStateException("Do not use this constructor");
+    }
+
     private static Jdbi getJdbi() {
         if(jdbi == null) {
             SQLiteDataSource ds = new SQLiteDataSource();

@@ -28,8 +28,8 @@ public class BDDFactory {
             ds.setUrl("jdbc:sqlite:" + System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "data.db");
             jdbi = Jdbi.create(ds);
             jdbi.installPlugin(new SqlObjectPlugin());
-            log.debug("user.dir : " + System.getProperty("user.dir"));
-            log.debug("java.io.tmpdir : " + System.getProperty("java.io.tmpdir"));
+            log.debug(String.format("user.dir : ", System.getProperty("user.dir")));
+            log.debug(String.format("java.io.tmpdir : ", System.getProperty("java.io.tmpdir")));
         }
         return jdbi;
     }

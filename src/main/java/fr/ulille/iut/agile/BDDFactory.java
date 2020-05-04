@@ -12,10 +12,15 @@ import java.sql.SQLException;
 
 @Singleton
 public class BDDFactory {
+
 	private static Jdbi jdbi = null;
 	private static String dbPath = "jdbc:sqlite:"
 	        + System.getProperty("java.io.tmpdir")
-	        + System.getProperty("file.separator");
+            + System.getProperty("file.separator");
+            
+    private BDDFactory() {
+        throw new IllegalStateException("Do not use this constructor");
+    }
 
     private static Jdbi getJdbi() {
     	if (jdbi == null) {
@@ -25,7 +30,6 @@ public class BDDFactory {
         }
         return jdbi;
     }
-
 
     static boolean tableExist(String tableName) throws SQLException {
         try (Handle handle = getJdbi().open()) {

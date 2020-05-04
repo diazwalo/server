@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Utilisateur{
-	final static Logger logger = LoggerFactory.getLogger(Utilisateur.class);
+	private static final Logger logger = LoggerFactory.getLogger(Utilisateur.class);
 	private String name;
 	private String mdp;
 	private String email;

@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Cuve {
 
-	private static final int valeurAlerteBase = 3/4;
+	private static final int VALEUR_ALERTE_BASE = 3/4;
 
 	private String cno;
 	private float capacite;
@@ -21,7 +21,7 @@ public class Cuve {
 			quantiteActuelle = capacite;
 		}
 		this.quantiteActuelle = quantiteActuelle;
-		this.alerteQuantite = capacite * valeurAlerteBase;
+		this.alerteQuantite = capacite * VALEUR_ALERTE_BASE;
 	}
 
 	public float getQuantiteActuelle() {

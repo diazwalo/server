@@ -4,9 +4,9 @@ import java.util.UUID;
 
 import fr.ulille.iut.agile.beans.ListConnected;
 
-public abstract class Request {
+public interface Request {
 
-	public void update(String pUUID) {
+	public default void update(String pUUID) {
 		ListConnected.instance.update(UUID.fromString(pUUID));
 	}
 	

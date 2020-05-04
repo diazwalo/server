@@ -10,10 +10,10 @@ import java.sql.SQLException;
 
 @Singleton
 public class BDDFactory {
-	 private static Jdbi jdbi = null;
-	    private static String dbPath = "jdbc:sqlite:"
-	            + System.getProperty("java.io.tmpdir")
-	            + System.getProperty("file.separator");
+	private static Jdbi jdbi = null;
+	private static String dbPath = "jdbc:sqlite:"
+	        + System.getProperty("java.io.tmpdir")
+	        + System.getProperty("file.separator");
 
     private static Jdbi getJdbi() {
     	if (jdbi == null) {

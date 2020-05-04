@@ -16,7 +16,7 @@ import java.sql.SQLException;
 @Singleton
 public class BDDFactory {
     private static Jdbi jdbi = null;
-    private final static Logger log = LoggerFactory.getLogger(BDDFactory.class);
+    private static final Logger log = LoggerFactory.getLogger(BDDFactory.class);
 
     private BDDFactory() {
         throw new IllegalStateException("Do not use this constructor");

@@ -45,5 +45,10 @@ public class CuveDaoImpl implements CuveDao{
 	public void modifierNom(Cuve cuve, String nom) {
 		cuve.setNom(nom);
 	}
+	@Override
+	public void creationTable() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

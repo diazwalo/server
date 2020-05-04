@@ -3,8 +3,8 @@ package fr.ulille.iut.agile;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.sqlite.SQLiteDataSource;
 
 import javax.inject.Singleton;
@@ -16,7 +16,7 @@ import java.sql.SQLException;
 @Singleton
 public class BDDFactory {
     private static Jdbi jdbi = null;
-    private static final Logger log = LoggerFactory.getLogger(BDDFactory.class);
+    private static final Logger LOGGER = Logger.getLogger(BDDFactory.class.getName());
 
     private BDDFactory() {
         throw new IllegalStateException("Do not use this constructor");
@@ -28,8 +28,8 @@ public class BDDFactory {
             ds.setUrl("jdbc:sqlite:" + System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "data.db");
             jdbi = Jdbi.create(ds);
             jdbi.installPlugin(new SqlObjectPlugin());
-            log.debug(String.format("user.dir : ", System.getProperty("user.dir")));
-            log.debug(String.format("java.io.tmpdir : ", System.getProperty("java.io.tmpdir")));
+            LOGGER.log(Level.INFO, "user.dir : {0}", System.getProperty("user.dir"));
+            LOGGER.log(Level.INFO, "java.io.tmpdir : {0}", System.getProperty("java.io.tmpdir"));
         }
         return jdbi;
     }

@@ -28,7 +28,7 @@ public class RequestCalculator {
 				return json.build();
 			}
 			
-			float res = consoJour * /*nbJoursSansPluie * */ coef / 1000;
+			float res = consoJour * /* A CHANGER */ 15 /* A CHANGER */ * coef / 1000;
 			json.add("stockage", res);
 		} catch(NumberFormatException e) {
 			json.add(stockage, "parametres incorrectes");

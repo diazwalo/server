@@ -1,44 +1,54 @@
 {
-	"Villes": [
+	"villes": [
 		{
-			"name" : "Paris",
-			"coef" : 100		
+			"name": "Paris",
+			"coef": 1,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=48.85341,2.3488&_auth=VU8DFFQqByVXelNkD3lReANrBDELfVN0BnoGZQtuB3pROlc2AGBVM1A%2BUSwEKwE3VntSMQ41UGBUPwtzDH5TMlU%2FA29UPwdgVzhTNg8gUXoDLQRlCytTdAZsBmALeAdlUTVXMQB9VTVQPFE0BCoBMVZlUi0OLlBpVDILZAxpUzZVMANhVDYHZ1c8Uy4PIFFgA2UENgs1U2oGMwZhCzUHZ1FgVzsAYlUxUDtRLQQ9ATZWZVIzDjZQblQ%2FC2UMflMvVU8DFFQqByVXelNkD3lReANlBDoLYA%3D%3D&_c=50905bc8e582e128ccc9c01d55e808e8"
 		},
 		{
-			"name" : "Marseille",
-			"coef" : 130		
+			"name": "Marseille",
+			"coef": 1.3,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=43.29695,5.38107&_auth=AxleSQ9xVnQFKAYxAHYHLlQ8UGVcKgMkVChXNAFvUC0CY1Y7AmddNl40USwPIAs6VXgHZFluBz4CYVU1AHJRLQNiXjMPZVYxBW4GYgA5ByxUeFAtXGIDJFQoVzkBbVAtAmBWNQJjXSFeM1EwDzgLIVViB2dZeQcgAmBVNwBlUToDZl4yD2tWPQVpBmwALwcsVGJQZVwxAzpUMFc0AWhQMQJpVjUCNV06XmdRMg8hCzZVYwdiWW8HOgJoVTIAblEtA39eQw8fVikFKgYmAGUHdVR6UGVcPQNv&_c=a55cacde839b140aafa180d6eda3bdfe"
 		},
 		{
-			"name" : "Lyon",
-			"coef" : 120	
+			"name": "Lyon",
+			"coef": 1.2,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=45.74846,4.84671&_auth=VkwEE1YoXH4CL1ptDngCK1c%2FAjdeKAIlVysBYl01XyIBZVY2DmUAZgNqVSgBLgMzU34EbAswAz0DZwFnWCpWKlY3BGlWPFw4AmRaPA46AilXewJ%2FXmACJVcrAW9dMV8iAWNWNQ5vAHwDblU0ATYDKVNkBGQLKwMkA2EBY1g9Vj1WMwRoVjJcNwJqWjoOIQIpV2ECN14zAjtXMwFiXTZfOAFkVjAObwA2A2pVNQEvAzZTYARnCzIDPANiAWBYNlYqVioEGVZGXCMCLVp6DmsCcFd5AjdePwJu&_c=674949ab1f3b799fef18832b2a9ffc14"
 		},
 		{
-			"name" : "Toulouse",
-			"coef" : 125		
+			"name": "Toulouse",
+			"coef": 1.25,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=43.60426,1.44367&_auth=CBJTRFYoACJRfFdgBnBSewVtBzJcKlN0VipQMwxiBXgCZ1E1B2BWNgRtAXxQf1ZjWHUBZV1mBj0FYAJiDH5UKAhpUz5WMgBgUT1XNAYzUnkFKQd6XGJTdFYqUD4MYAV4AmBRMgdmVioEaQFgUGdWfFhvAWFdfQYhBWcCYAxpVD8IbVM%2FVj0AYlE%2BVzQGKVJ5BTMHMlwxU2pWMlAzDGkFZwJlUTMHZ1Y0BD0BZlB%2BVmtYbwFmXWYGOAVhAmMMYVQoCHRTTlZGAH9Rfld3BmNSIAUrBzJcPVM%2F&_c=213cf84ccb8305347115b808e46f074d"
 		},
 		{
-			"name" : "Nice",
-			"coef" : 130		
+			"name": "Nice",
+			"coef": 1.3,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=43.70313,7.26608&_auth=ARsAFwR6AyFXegM0UyUELQVtAjcAdgMkVipXNFo0Ui9SNlM3VjZcP1U5Ui9VelVmBSgObFxlAD4CYQdoWCpQLAFgAG0EbgNhVzwDZVNjBC8FKQJ%2FAD4DJFYqVzlaNlIvUjBTMFY3XCBVOFIzVWJVfwUyDm5cfAAnAmAHZVg9UDsBZABsBG8DYVc6A2BTfAQvBTMCNwBtAzpWMlc0Wj5SNFIzUzRWPVxsVT1SNFV7VWkFPg5oXGYAOAJmB2ZYM1AsAX0AHQQUA3xXeAMjUzYEdgUrAjcAYQNv&_c=692ed698ffe040a0bbc81c67e3495944"
 		},
 		{
-			"name" : "Nantes",
-			"coef" : 110		
+			"name": "Nantes",
+			"coef": 1.1,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=47.21725,-1.55336&_auth=ABpTRAR6ASMFKAE2UiQBKFc%2FBjMJfwYhBnoBYlw2VCkJaFUwAWUEZANpWyYALwsiAzFUKl5kAj8DYwZiWDNfIwB8UzUEbgFqBWoBalJkATxXewZ5CSsGPwZ6AXlcOFQ2CXRVMAFlBGQDcls7ADMLOAMuVDBeYQIlA38GYFgwXzQAa1MxBG8BawVrAWNSZgEqV3sGYwljBmwGZAFhXDVUYgliVWABZQQyA2RbawA0CyEDMFQzXmECPQNmBmlYNl80AHxTKAQeARAFdwEjUiABYFciBnsJYwZgBjE%3D&_c=44fab9b8a6da78a07f2be1e3200a808e"
 		},
 		{
-			"name" : "Monpellier",
-			"coef" : 130		
+			"name": "Monpellier",
+			"coef": 1.3,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=43.61092,3.87723&_auth=AxlXQA9xUnAEKVNkAXcDKlI6VWALfVN0C3dRMghmXyJSNwRhAWJWPQVoUi8EKwQzBSgOZl1lV2hRMAFlXy1XKwNiVzoPZVIyBGpTNwE3AyhSflUoCzVTdAt3UT8IZF8iUjAEZwFgVioFaFIzBDMELgUyDm5dfVdwUTMBY186VzwDZlc7D2RSMQRpUzYBLgMoUmRVYAtmU2oLb1EyCDNfalJgBDIBZlZlBWpSNgQqBDgFNA5tXWRXbVE2AWVfN1crA39XSg8fUi0EK1NzAWQDcVJ8VWALalM%2F&_c=b0eafc007edb5f87a5602f5922ccfd7d"
 		},
 		{
-			"name" : "Strasbourg",
-			"coef" : 120	
+			"name": "Strasbourg",
+			"coef": 1.2,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=48.58342,7.74296&_auth=VkxWQQN9ByVecwA3A3UKIwRsATQIfgIlUy9QMwpvXiMIbl8zVTUDZVc6AXxTfAc0Ai9XMA02AzlWPFEwAXNXK1Y3VjsDZwdmXjYAagMwCiEEKAF8CDYCJVMvUD4KZl4jCGpfPFU0A39XOgFgU2QHLQI1VzcNLQMkVjRRMwFkVzxWM1Y6A2gHZF41AGsDLAohBDIBNAhlAjtTN1AyCmZeOAhpXz9VYwNlVzgBalN9BzACM1c2DToDMlYyUTcBblcrVipWSwMTB3hecQAgA2YKeAQqATQIaQJu&_c=249785d1caed195a45f4465a334e8228"
 		},
 		{
-			"name" : "Bordeaux",
-			"coef" : 115		
+			"name": "Bordeaux",
+			"coef": 1.15,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=44.84044,-0.5805&_auth=CBJVQlIsXX8ALQcwAHYBKFY%2BDzpZL1VyAHwGZV82VyoFbgRkBWZWMAVuVCkEKwojWWpVKw40UGABYgZkAXNSLghoVTFSMl0%2BAGoHbQAyASpWeg9yWWdVcgB8BmhfM1cqBWcEZwVkVioFaFQ1BDMKIFluVTUOLlB3AWMGZAFkUjkIbVU5UjldPgBpB2IALwEqVmAPOlk0VWwAZAZkXzBXMwUyBGUFNFY3BWxUPwQqCjpZb1UwDjNQbwFhBmkBZFIuCHRVSFJCXSIALwcnAGUBc1Z4DzpZOFU5&_c=3ca91b980c7ff1041678a33278b9c907"
 		},
 		{
-			"name" : "Lille",
-			"coef" : 100		
+			"name": "Lille",
+			"coef": 1,
+			"url_api": "http://www.infoclimat.fr/public-api/gfs/json?_ll=50.63297,3.05858&_auth=BB5XQFEvUnBTflFmVCILIlE5BzIIfgAnA39WNF0wB3pUMQJlAGEBagBoB3oAL1JlBClSMg81BjZTNVI9D31WKgRlVzpRO1I4Uz9RMVRgCyBRfQd6CDYAJwN%2FVjhdMQd6VDYCYQBhAX0AbQdmADdSeAQzUjIPLwYhUzFSMA9qVj0EYVc7UTpSMlM8UTBUewsgUWcHMghlADkDZ1Y0XTQHNlQ%2BAjIAawFlAGoHbQAuUm4EM1I6DzgGO1M0UjcPZlYqBHhXSlFBUi1TfFFxVDELeVF%2FBzIIaQBs&_c=afc1d9af98e2382c2101be4b4bf13f08"
 		}
 	]
 }

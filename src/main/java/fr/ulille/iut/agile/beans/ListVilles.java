@@ -1,9 +1,10 @@
 package fr.ulille.iut.agile.beans;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class ListVilles {
+public class ListVilles implements Iterable<Ville> {
 
 	private List<Ville> listeVilles;
 	
@@ -24,7 +25,7 @@ public class ListVilles {
 		return null;
 	}
 	
-	public float getCoefOf(String pName) {
+	public double getCoefOf(String pName) {
 		Ville myVille = getVille(pName);
 		if(myVille == null) return -1;
 		
@@ -33,6 +34,44 @@ public class ListVilles {
 	
 	public boolean exist(String pName) {
 		return getVille(pName) != null;
+	}
+	
+	public void addMeteoTo(String pVille, Meteo pMeteo) {
+		Ville myVille = getVille(pVille);
+		if(myVille == null) return;
+		
+		myVille.addMeteo(pMeteo);
+	}
+	
+	public List<Meteo> getMeteoFrom(String pVille) {
+		Ville myVille = getVille(pVille);
+		if(myVille == null) return null;
+		
+		return myVille.getMeteo();
+	}
+
+	@Override
+	public Iterator<Ville> iterator() {
+		return new ListVillesIterator();
+	}
+	
+	public class ListVillesIterator implements Iterator<Ville> {
+		
+		private int idx = 0;
+		private int size = listeVilles.size();
+
+		@Override
+		public boolean hasNext() {
+			return idx < size;
+		}
+
+		@Override
+		public Ville next() {
+			Ville myVille = listeVilles.get(idx);
+			idx++;
+			return myVille;
+		}
+		
 	}
 	
 }

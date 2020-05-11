@@ -5,6 +5,7 @@ import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
+import fr.ulille.iut.agile.beans.ApiMeteo;
 import fr.ulille.iut.agile.beans.LoadJson;
 
 import java.io.IOException;
@@ -36,6 +37,7 @@ public class Main {
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
         
+        startApiMeteo();
         loadRessource();
         
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
@@ -43,6 +45,10 @@ public class Main {
     
     private static void loadRessource() {
     	LoadJson.instance.load();
+    }
+    
+    private static void startApiMeteo() {
+    	ApiMeteo.instance.start();
     }
 
     /**

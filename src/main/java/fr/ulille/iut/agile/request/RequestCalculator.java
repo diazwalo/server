@@ -22,13 +22,13 @@ public class RequestCalculator {
 			float consoJour = Float.parseFloat(pConsoJour);
 			// Recuperer via la ville int nbJoursSansPluie = 
 			
-			float coef = ListVilles.instance.getCoefOf(pVille);
+			double coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
 				json.add(stockage, "ville incorrecte");
 				return json.build();
 			}
 			
-			float res = consoJour * /* A CHANGER */ 15 /* A CHANGER */ * coef / 1000;
+			double res = consoJour * /* A CHANGER */ 15 /* A CHANGER */ * coef / 1000;
 			json.add("stockage", res);
 		} catch(NumberFormatException e) {
 			json.add(stockage, "parametres incorrectes");
@@ -48,13 +48,13 @@ public class RequestCalculator {
 			float dimensionMur = Float.parseFloat(pDimensionMur);
 			float consoJour = Float.parseFloat(pConsoJour);
 			
-			float coef = ListVilles.instance.getCoefOf(pVille);
+			double coef = ListVilles.instance.getCoefOf(pVille);
 			if(coef == -1) {
 				json.add(conso, "ville incorrecte");
 				return json.build();
 			}
 			
-			float res = dimensionMur * consoJour * coef;
+			double res = dimensionMur * consoJour * coef;
 			json.add(conso, res);
 		} catch(NumberFormatException e) {
 			json.add(conso, "parametres incorrectes");
